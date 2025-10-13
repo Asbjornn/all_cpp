@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 09:17:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/09/24 09:36:35 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/13 15:40:45 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed_point {
     public:
@@ -23,7 +24,6 @@ class Fixed_point {
     Fixed_point(const float value);
     
     Fixed_point& operator=(const Fixed_point&);
-    std::ostream& operator<<(std::ostream& out, const Fixed_point& fixed)   ; 
     int     getRawBits(void) const;
     void    setRawBits(int const raw);
     int     toInt(void) const;
@@ -34,6 +34,9 @@ class Fixed_point {
     private:
     int                 number_value;
     static const int    fractionnal;
+
 };
+
+std::ostream& operator<<(std::ostream& out, const Fixed_point& fixed);
 
 #endif

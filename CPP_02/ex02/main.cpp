@@ -5,20 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/01 19:25:09 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/13 14:25:06 by gcauchy          ###   ########.fr       */
+/*   Created: 2025/10/13 15:47:39 by gcauchy           #+#    #+#             */
+/*   Updated: 2025/10/13 15:50:26 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-int main(void)
-{
-    randomChump("Bob");
+int	main(void) {
+	Fixed_point			a;
+	Fixed_point const	b(Fixed_point(5.05f) * Fixed_point(2));
 
-    Zombie* George = newZombie("George");
-    George->announce();
-    delete George;
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
 
-    return (0);
+	std::cout << b << std::endl;
+
+	std::cout << Fixed_point::max(a, b) << std::endl;
 }

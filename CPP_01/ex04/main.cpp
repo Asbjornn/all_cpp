@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:02:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/09/03 09:18:50 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/13 15:00:44 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         std::cout << argv[1] << " failed to open" << std::endl;
         return (1);    
     }
-    std::cout << argv[1] << " is open" << std::endl;
+    std::cout << "new file '" << argv[1] << "' is created" << std::endl;
      
     while (std::getline(in, line))
     {
@@ -50,7 +50,8 @@ int main(int argc, char *argv[])
         }
         out << line << std::endl;;
     }
-    
+    std::cout << GREEN << "All is done !" << RESET << std::endl;
+	
     in.close();
     out.close();
     return (0);

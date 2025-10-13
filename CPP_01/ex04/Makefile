@@ -24,7 +24,7 @@ $(DIR_O)/%.o: %.cpp | $(DIR_O)
 	@$(CC) $(FLAG) -c $< -o $@
 
 $(NAME): $(OBJ)
-	@$(CC) $(FLAG) $(CPP) $(OBJ) -o $(NAME) && echo "$(GREEN)COMPILATION SUCCEED"\
+	@$(CC) $(FLAG) $(CPP) $(OBJ) -o $(NAME) && echo -e "$(GREEN)COMPILATION SUCCEED"\
 	"\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"\
 	"⣿⣿⣿⣿⣿⣿⣿⠛⢩⣴⣶⣶⣶⣌⠙⠫⠛⢋⣭⣤⣤⣤⣤⡙⣿⣿⣿⣿⣿⣿\n"\
 	"⣿⣿⣿⣿⣿⡟⢡⣾⣿⠿⣛⣛⣛⣛⣛⡳⠆⢻⣿⣿⣿⠿⠿⠷⡌⠻⣿⣿⣿⣿\n"\
@@ -42,10 +42,10 @@ $(NAME): $(OBJ)
 	"$(BLUE)⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄$(GREEN)⢰⣶⣶⣶⣾⣿⣿⣿⣿⣷⡄$(BLUE)⠄$(GREEN)⢠⣾⣿⣿⣿"
 
 clean:
-	@rm -rf $(DIR_O) && echo "${GREEN}FILE .O DELETED"
+	@rm -rf $(DIR_O) && echo -e "${GREEN}FILE .O DELETED"
 
 fclean: clean
-	@rm $(NAME) && echo "${GREEN}EXEC DELETED"
+	@rm $(NAME) && echo -e "${GREEN}EXEC DELETED"
 
 re: fclean all
 

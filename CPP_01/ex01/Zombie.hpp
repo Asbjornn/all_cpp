@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:24:27 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/08/29 23:35:50 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/13 14:19:42 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
+#include "Colors.hpp"
 
 class Zombie {
     public:

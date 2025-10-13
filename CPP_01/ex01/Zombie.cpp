@@ -6,18 +6,18 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:25:31 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/08/29 23:37:38 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/13 14:19:51 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 Zombie::Zombie (std::string zombie_name) {
-    this->name = zombie_name;
+	this->name = zombie_name;
 }
 
 void Zombie::set_name (std::string zombie_name) {
-    this->name = zombie_name;
+	this->name = zombie_name;
 }
 
 void Zombie::announce ( void ) {
