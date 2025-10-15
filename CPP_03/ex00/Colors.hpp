@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:05:07 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/13 14:06:32 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/15 13:39:17 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@
 #define BLACK       "\033[0;30m"
 #define RED         "\033[0;31m"
 #define GREEN       "\033[0;32m"
-#define YELLOW      "\033[0;33m"
+#define YELLOW      "\033[38;2;255;255;0m"
 #define BLUE        "\033[0;34m"
 #define MAGENTA     "\033[0;35m"
 #define CYAN        "\033[0;36m"
 #define WHITE       "\033[0;37m"
+#define ORANGE		"\033[38;2;255;128;0m"
 
 // Bold
 #define BBLACK      "\033[1;30m"
