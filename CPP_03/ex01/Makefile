@@ -1,4 +1,4 @@
-NAME	= clap_trap
+NAME	= scav_trap
 
 CC		= c++
 FLAG	= -Wall -Wextra -Werror -g

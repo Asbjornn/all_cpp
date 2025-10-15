@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:05:07 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/15 13:39:17 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/15 15:29:51 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@
 #define UMAGENTA    "\033[4;35m"
 #define UCYAN       "\033[4;36m"
 #define UWHITE      "\033[4;37m"
+
+#define BLINK		"\033[5m"
 
 #endif

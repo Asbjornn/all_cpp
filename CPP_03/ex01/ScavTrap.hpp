@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:51 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/15 13:59:49 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/15 15:57:57 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,18 @@
 #include "Colors.hpp"
 #include "ClapTrap.hpp"
 
-class ScavTrap : ClapTrap {
+class ScavTrap : public ClapTrap {
 	public:
-		void	attack(const std::string& target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		ScavTrap (std::string name) : ClapTrap(name) {
+			std::cout << "ScavTrap constructor called" << std::endl;
+			this->name = name;
+			this->hit_point = 100;
+			this->energy_point = 50;
+			this->attack_damage = 20;
+		}
+		~ScavTrap ();
+		void	attack(const std::string& target) override;
+		void	guardGate ();
 	
 	private:
 		std::string	name;
