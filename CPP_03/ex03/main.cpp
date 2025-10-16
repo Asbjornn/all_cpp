@@ -6,40 +6,34 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:22:25 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 15:34:45 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/16 15:35:27 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main (void)
 {
-	std::cout << BWHITE << "=== Création de ClapTrap 'Bob' ===" << RESET << std::endl;
-	ClapTrap bob("Bob");
-	std::cout << BWHITE << "=== Création de ClapTrap 'CPX30EF' ===" << RESET << std::endl;
-	ClapTrap CPX30("CPX30EF");
-	
-	std::cout << BWHITE << "\n=== Test avec Bob ===" << RESET << std::endl;
-	bob.attack("Washing machine");
-	bob.takeDamage(2);
-	bob.beRepaired(3);
-	
-	for (int i = 0; i < 5; i++)
-		bob.takeDamage(2);
-	bob.beRepaired(1);
-	bob.takeDamage(2);
-	
-	bob.attack("Table");
-	bob.beRepaired(5);
-	bob.takeDamage(5);
+	std::cout << BWHITE << "=== Création de DiamondTrap 'Dio' ===" << RESET << std::endl;
+    DiamondTrap diamond("Dio");
 
-	std::cout << std::endl << std::endl;
-	std::cout << BWHITE << "\n=== Test avec CPX30EF ===" << RESET << std::endl;
-	for (int i = 0; i < 10; i++)
-		CPX30.beRepaired(1);
-	CPX30.attack("Bob");
-	CPX30.beRepaired(5);
-	CPX30.takeDamage(5);
+    std::cout << BWHITE << "\n=== Test des attaques (ScavTrap version) ===" << RESET << std::endl;
+    diamond.attack("Jojo");
+
+    std::cout << BWHITE << "\n=== Test des dégâts et réparation (ClapTrap) ===" << RESET << std::endl;
+    diamond.takeDamage(10);
+    diamond.beRepaired(20);
+    diamond.takeDamage(15);
+
+    std::cout << BWHITE << "\n=== Test des capacités spécifiques ===" << RESET << std::endl;
+    diamond.guardGate();
+    diamond.highFivesGuys();
+
+    std::cout << BWHITE << "\n=== Test whoAmI() (DiamondTrap spécifique) ===" << RESET << std::endl;
+    diamond.whoAmI();
 
     std::cout << BWHITE << "\n=== Fin du programme ===" << RESET << std::endl;
     return 0;

@@ -6,40 +6,29 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:22:25 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 15:34:45 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/16 15:35:40 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main (void)
 {
-	std::cout << BWHITE << "=== Création de ClapTrap 'Bob' ===" << RESET << std::endl;
-	ClapTrap bob("Bob");
-	std::cout << BWHITE << "=== Création de ClapTrap 'CPX30EF' ===" << RESET << std::endl;
-	ClapTrap CPX30("CPX30EF");
-	
-	std::cout << BWHITE << "\n=== Test avec Bob ===" << RESET << std::endl;
-	bob.attack("Washing machine");
-	bob.takeDamage(2);
-	bob.beRepaired(3);
-	
-	for (int i = 0; i < 5; i++)
-		bob.takeDamage(2);
-	bob.beRepaired(1);
-	bob.takeDamage(2);
-	
-	bob.attack("Table");
-	bob.beRepaired(5);
-	bob.takeDamage(5);
+	std::cout << BWHITE << "=== Création de FragTrap 'Happy' ===" << RESET << std::endl;
+	FragTrap high_fives("Happy");
 
-	std::cout << std::endl << std::endl;
-	std::cout << BWHITE << "\n=== Test avec CPX30EF ===" << RESET << std::endl;
-	for (int i = 0; i < 10; i++)
-		CPX30.beRepaired(1);
-	CPX30.attack("Bob");
-	CPX30.beRepaired(5);
-	CPX30.takeDamage(5);
+    std::cout << BWHITE << "\n=== Test des attaques (ClapTrap version) ===" << RESET << std::endl;
+	high_fives.attack("Wall");
+
+    std::cout << BWHITE << "\n=== Test des dégâts et réparation (ClapTrap) ===" << RESET << std::endl;
+    high_fives.takeDamage(10);
+    high_fives.beRepaired(20);
+    high_fives.takeDamage(10);
+
+    std::cout << BWHITE << "\n=== Test des capacités spécifiques ===" << RESET << std::endl;
+    high_fives.highFivesGuys();
 
     std::cout << BWHITE << "\n=== Fin du programme ===" << RESET << std::endl;
     return 0;
