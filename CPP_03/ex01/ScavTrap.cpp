@@ -6,11 +6,27 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:34 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/15 15:57:30 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/16 10:58:26 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
+	std::cout << "ScavTrap constructor called" << std::endl;
+	this->name = name;
+	this->hit_point = 100;
+	this->energy_point = 50;
+	this->attack_damage = 20;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy) {
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+	this->name = copy.name;
+	this->hit_point = copy.hit_point;
+	this->energy_point = copy.energy_point;
+	this->attack_damage = copy.attack_damage;
+}
 
 void	ScavTrap::attack(const std::string& target) {
 	if (this->energy_point <= 0)
