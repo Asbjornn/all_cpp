@@ -1,4 +1,4 @@
-NAME	= polymorphism
+NAME	= polymorphism_brain
 
 CC		= c++
 FLAG	= -Wall -Wextra -Werror -g -Wshadow
