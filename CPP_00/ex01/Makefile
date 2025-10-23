@@ -1,4 +1,4 @@
-NAME	= phookbone
+NAME	= phonebook
 
 CC		= c++
 FLAG	= -Wall -Wextra -Werror -g

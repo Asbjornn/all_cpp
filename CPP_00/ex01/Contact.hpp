@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:55:35 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 12:05:33 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/23 14:41:16 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class Contact {
 	public:
-		void fill(int id);
-		void print(std::string s);
+		void 		fill(int id);
+		void 		print(std::string s);
 		std::string get_first_name();
 		std::string get_last_name();
 		std::string get_nickname();

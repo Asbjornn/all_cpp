@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:03:32 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 12:07:51 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/23 14:41:02 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(void) {
 	PhoneBook phonebook;
 	std::string	input;
 	
-	std::cout << "Welcome to the phookbone ..." << std::endl;
+	std::cout << "Welcome to the phonebook ..." << std::endl;
 	do
 	{
 		std::cout << "Enter a command : ";
@@ -35,6 +35,6 @@ int	main(void) {
 			std::cout << "You can only use ADD, SEARCH and EXIT" << std::endl;
 	} while (input != "EXIT");
 	
-	std::cout << "Phookbone is now close ..." << std::endl;
+	std::cout << "Phonebook is now close ..." << std::endl;
 	return (0);
 }

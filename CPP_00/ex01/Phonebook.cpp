@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 14:18:23 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 12:08:33 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/23 14:41:48 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	PhoneBook::get_contact_line() {
 		std::cin.ignore(1, '\n');
 		if (input < size && input >= 0)
 			break ;
-		std::cout << "Index is not in the Phookbone .." << std::endl;
+		std::cout << "Index is not in the phonebook .." << std::endl;
 	} while (1);
 	std::cout << " ~~~~~~~~~~~~~~~~~~~ " << std::endl;
 	std::cout << "First name : " << contacts[input].get_first_name() << std::endl;
@@ -58,7 +58,7 @@ void	PhoneBook::search() {
 	Contact	actu;
 	if (size == 0)
 	{
-		std::cout << "The phookbone is empty, use ADD to fill it .." << std::endl;
+		std::cout << "The phonebook is empty, use ADD to fill it .." << std::endl;
 		return ;
 	}
 	std::cout << std::string(45, '-') << std::endl;
