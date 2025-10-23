@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 15:25:18 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 11:53:47 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/23 16:51:48 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ void	Account::_displayTimestamp(void) {
     char buf[20];
 
     strftime(buf, sizeof(buf), "[%Y%m%d_%H%M%S]", t);
+	std::cout << buf;
 }
 
 // ============ Constructor and Destructor ============
