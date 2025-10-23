@@ -6,11 +6,15 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:25:31 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/13 14:24:25 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/23 16:02:15 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie () {
+    std::cout << name << " is created" << std::endl;
+}
 
 Zombie::Zombie (std::string zombie_name) {
 	if (zombie_name.empty())
@@ -19,7 +23,8 @@ Zombie::Zombie (std::string zombie_name) {
 		this->name = "Claude";
 	}
 	else
-    	this->name = zombie_name;
+		this->name = zombie_name;
+	std::cout << name << " is created" << std::endl;
 }
 
 void Zombie::announce ( void ) {
