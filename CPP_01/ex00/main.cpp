@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:25:09 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 16:01:26 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:30:39 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main(void)
 {
+	Zombie* George = newZombie("George");
+	
     randomChump("Bob");
-
-    Zombie* George = newZombie("George");
     George->announce();
     delete George;
 

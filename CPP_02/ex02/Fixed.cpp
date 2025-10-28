@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:12:14 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/15 11:17:09 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 16:07:39 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@ const int Fixed_point::fractionnal = 8;
 // ~~~~~~~~~~~~~~~~~~~~~  Constructor  ~~~~~~~~~~~~~~~~~~~~~ //
 
 Fixed_point::Fixed_point() {
-    // std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called" << std::endl;
     number_value = 0;
 }
 
 Fixed_point::Fixed_point(const Fixed_point& copy) {
-    // std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
     number_value = copy.number_value;
 }
 
 Fixed_point::Fixed_point(const int value) {
-    // std::cout << "Int constructor called" << std::endl;
+    std::cout << "Int constructor called" << std::endl;
     number_value = value << fractionnal;
 }
 
 Fixed_point::Fixed_point(const float value) {
-    // std::cout << "Float constructor called" << std::endl;
+    std::cout << "Float constructor called" << std::endl;
     number_value = roundf(value * (1 << fractionnal));
 }
 
 Fixed_point& Fixed_point::operator=(const Fixed_point& other) {
-    // std::cout << "Copy assignment constructor called" << std::endl;
+    std::cout << "Copy assignment constructor called" << std::endl;
     number_value = other.number_value;
 
     return *this;
@@ -173,5 +173,5 @@ const Fixed_point& Fixed_point::max(const Fixed_point&a, const Fixed_point& b) {
 // ~~~~~~~~~~~~~~~~~~~~~  Destructor  ~~~~~~~~~~~~~~~~~~~~~ //
 
 Fixed_point::~Fixed_point() {
-    // std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor called" << std::endl;
 }

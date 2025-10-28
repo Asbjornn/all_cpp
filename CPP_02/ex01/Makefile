@@ -45,7 +45,7 @@ clean:
 	@rm -rf $(DIR_O) && echo "${GREEN}FILE .O DELETED"
 
 fclean: clean
-	@rm $(NAME) && echo "${GREEN}EXEC DELETED"
+	@rm -f $(NAME) && echo "${GREEN}EXEC DELETED"
 
 re: fclean all
 

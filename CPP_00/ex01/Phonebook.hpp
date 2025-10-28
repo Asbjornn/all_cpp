@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 14:19:07 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 11:58:19 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:09:45 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class PhoneBook {
 	public:
-		PhoneBook() : rear(0), size(0) {}
+		PhoneBook();
 		void add_contact();
 		void search();
 		void get_contact_line();

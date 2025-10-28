@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 09:23:53 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/09/22 10:05:48 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:10:15 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@
 
 void    Harl::complain(std::string level) {
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    void (Harl::*functions[4])(void)  = {
-        &Harl::debug,
-        &Harl::info,
-        &Harl::warning,
-        &Harl::error
-    };
 
     int index;
     for (index = 0; index < 4; index++)
@@ -28,36 +22,16 @@ void    Harl::complain(std::string level) {
 
     switch (index) {
     case 0:
-        while (index < 4)
-        {
-            (this->*functions[index++])();
-            std::cout << std:: endl;
-        }
-        break;
+        info();
     case 1:
-        while (index < 4)
-        {
-            (this->*functions[index++])();
-            std::cout << std:: endl;
-        }
-        break;
+        debug();
     case 2:
-        while (index < 4)
-        {
-            (this->*functions[index++])();
-            std::cout << std:: endl;
-        }
-        break;
+        warning();
     case 3:
-        while (index < 4)
-        {
-            (this->*functions[index++])();
-            std::cout << std:: endl;
-        }
+		error();
         break;
     default:
         std::cout << "Probably complaining about insignificant things" << std::endl;
-        break;
     }
 }
 

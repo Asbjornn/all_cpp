@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:01:20 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/08/05 18:03:28 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:43:34 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class HumanB {
     public:
-        HumanB(std::string n) : name(n), weapon(nullptr) {};
+        HumanB(std::string n);
         void attack(void);
         void setWeapon(Weapon& w);
         

@@ -6,17 +6,18 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:02:09 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 17:10:47 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:42:21 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
 Weapon::Weapon() {
-    
+    std::cout << "Weapon constructor called" << std::endl;
 }
 
 Weapon::Weapon(std::string s) {
+	std::cout << "Weapon constructor called" << std::endl;
     this->type = s;
 }
 
