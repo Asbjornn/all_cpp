@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:01:57 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 17:10:41 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:46:33 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 HumanA::HumanA(std::string n, Weapon& w) : weapon(w) {
     this->name = n;
-    std::cout << name << "is created" << std::endl;
+    std::cout << name << " is created" << std::endl;
 }
 
 void HumanA::attack (void) {

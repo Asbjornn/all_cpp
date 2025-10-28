@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:25:31 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 16:02:15 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 11:16:44 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Zombie::Zombie () {
 Zombie::Zombie (std::string zombie_name) {
 	if (zombie_name.empty())
 	{
-		std::cout << CYAN << "Empty name set to a default value" << RESET << std::endl;
+		std::cout << "Empty name set to a default value" << std::endl;
 		this->name = "Claude";
 	}
 	else

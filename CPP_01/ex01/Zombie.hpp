@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:24:27 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 16:55:19 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/28 12:08:54 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
-#include "Colors.hpp"
 
 class Zombie {
     public:
         Zombie();
         Zombie (std::string zombie_name);
+        ~Zombie();
+		
         void announce (void);
         void set_name (std::string zombie_name);
-        ~Zombie();
     
     private:
         std::string name;

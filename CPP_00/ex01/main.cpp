@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:03:32 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 14:41:02 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:06:51 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,4 @@ int	main(void) {
 	std::cout << "Phonebook is now close ..." << std::endl;
 	return (0);
 }
+ std::cin >> input;

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 19:25:09 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 16:57:18 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:36:12 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ int main(void)
     int size(5);
 
 	if (size <= 0){
-		std::cout << RED << "size under or equal to 0" << RESET << std::endl;
+		std::cout << "size under or equal to 0" << std::endl;
 		return (0);
 	}
 	
     Zombie* zom = zombieHorde(size, "Jean");
 	
 	if (!zom) {
-		std::cout << RED << "Not a valid name" << RESET << std::endl;
+		std::cout << "Not a valid name" << std::endl;
 		delete[] zom;
 		return (0);
 	}
