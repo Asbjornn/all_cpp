@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:12:14 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/27 16:07:39 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/28 13:41:45 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,8 +97,7 @@ Fixed_point Fixed_point::operator*(const Fixed_point& other) const {
 
 Fixed_point Fixed_point::operator/(const Fixed_point& other) const {
 	Fixed_point result;
-	result.number_value = this->number_value / other.number_value;
-	result.number_value = result.number_value >> fractionnal;
+	result.number_value = (this->number_value << fractionnal) / other.number_value;
 	return result;
 }
 

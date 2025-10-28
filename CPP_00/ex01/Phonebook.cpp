@@ -6,11 +6,15 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 14:18:23 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/23 14:41:48 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/28 13:23:27 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
+
+PhoneBook::PhoneBook() {
+	
+}
 
 void	PhoneBook::add_contact() {
 	Contact contact;

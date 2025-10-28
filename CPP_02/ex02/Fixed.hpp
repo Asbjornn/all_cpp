@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 09:17:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/15 11:06:10 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/28 13:40:31 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ class Fixed_point {
 		void	setRawBits(int const raw);
 		int		toInt(void) const;
 		float	toFloat(void) const;
+		
 		static	Fixed_point& min(Fixed_point& a, Fixed_point& b);
 		static const Fixed_point& min(const Fixed_point& a, const Fixed_point& b);
 		static	Fixed_point& max(Fixed_point& a, Fixed_point& b);
