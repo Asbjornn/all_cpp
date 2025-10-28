@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:12:00 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/21 17:26:33 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:58:15 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,31 +19,24 @@
 int	main(void)
 {
 	std::cout << "===== Subject test =====" << std::endl;
-	const Animal* meta = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 	
-	std::cout << dog->getType() << " " << std::endl;
-	std::cout << cat->getType() << " " << std::endl;
+	std::cout << std::endl;
 	
-	cat->makeSound(); //will output the cat sound!
-	dog->makeSound();
-	meta->makeSound();
+	delete j;//should not create a leak
+	delete i;
 
-	delete meta;
-	delete dog;
-	delete cat;
+	std::cout << "===== Other test =====" << std::endl;
+	const	Animal*	meute = new Animal[6];
 	
-	std::cout << std::endl << "===== Wrong animal test =====" << std::endl;;
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* wrongCat = new WrongCat();
+	for (int i = 0; i < 6; i++)
+	{
+		if ((i % 2) == 0)
+			meute[i] = Dog();
+		else
+			meute[i] = Cat();
+	}
 	
-	std::cout << wrongCat->getType() << " " << std::endl;
-	
-	wrongCat->makeSound(); //will not output the cat sound!
-	wrongMeta->makeSound();
-
-	delete wrongMeta;
-	delete wrongCat;
 	return 0;
 }

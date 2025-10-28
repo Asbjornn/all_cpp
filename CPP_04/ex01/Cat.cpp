@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:53:50 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/21 17:09:51 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/24 16:10:24 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 Cat::Cat() : Animal() {
     std::cout << "Cat constructor called" << std::endl;
     this->type = "Cat";
+    _brain = new Brain();
 }
 
 Cat::Cat(const Cat& copy) : Animal(copy) {
     std::cout << "Cat copy constructor called" << std::endl;
     this->type = copy.type;
+    _brain = new Brain();
 }
 
 Cat& Cat::operator=(const Cat& other) {
     std::cout << "Cat copy assignment operrator called" << std::endl;
     this->type = other.type;
+    _brain = new Brain();
     return *this;
 }
 
@@ -34,4 +37,5 @@ void    Cat::makeSound(void) const {
 
 Cat::~Cat() {
     std::cout << "Cat destructor called" << std::endl;
+    delete _brain;
 }
