@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:12:00 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 15:28:44 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/28 15:58:48 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,22 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int	main(void)
-{
-	std::cout << "===== Subject test =====" << std::endl;
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	
-	std::cout << std::endl;
-	
-	delete j;//should not create a leak
-	delete i;
+int main() {
+    std::cout << "===== ABSTRACT CLASS TEST =====" << std::endl;
 
-	std::cout << std::endl << "===== Other test =====" << std::endl;
-	int		size = 6;
-	const	Animal*	meute[size];
-	
-	for (int a = 0; a < size; a++)
-	{
-		if ((a % 2) == 0)
-			meute[a] = new Dog();
-		else
-			meute[a] = new Cat();
-	}
+    // Animal a; //  Impossible : cannot declare variable of abstract type
 
-	std::cout << std::endl;
-	
-	for (int a = 0; a < size; a++)
-		delete meute[a];
-	
-	std::cout << "\n===== DEEP COPY TEST =====" << std::endl;
+    Animal* dog = new Dog();
+    Animal* cat = new Cat();
 
-    Dog dog1;
-    Dog dog2 = dog1;
-	
-	return 0;
+    std::cout << "dog type: " << dog->getType() << std::endl;
+    std::cout << "cat type: " << cat->getType() << std::endl;
+
+    dog->makeSound();
+    cat->makeSound();
+
+    delete dog;
+    delete cat;
+
+    return 0;
 }

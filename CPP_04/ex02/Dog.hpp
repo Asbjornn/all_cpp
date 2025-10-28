@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 17:29:40 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 15:21:48 by gcauchy          ###   ########.fr       */
+/*   Created: 2025/10/21 16:51:34 by gcauchy           #+#    #+#             */
+/*   Updated: 2025/10/24 16:10:02 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_HPP
+# define DOG_HPP
+
+#include "Animal.hpp"
 #include "Brain.hpp"
 
-Brain::Brain() {
-    std::cout << "Brain constructor called" << std::endl;
-}
+class Dog : public Animal {
+	public:
+		Dog();
+		Dog(const Dog& copy);
+		Dog& operator=(const Dog& other);
+		~Dog();
+		
+		void	makeSound(void) const;
 
-Brain::Brain(const Brain& copy) {
-    std::cout << "Brain copy contructor called" << std::endl;
-    (void)copy;
-}
+	private:
+		Brain* _brain;
+};
 
-Brain& Brain::operator=(const Brain& other) {
-    std::cout << "Brain copy asignment called" << std::endl;
-    (void)other;
-    return *this;
-}
 
-Brain::~Brain() {
-    std::cout << "Brain destructor called" << std::endl;
-}
+#endif
