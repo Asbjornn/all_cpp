@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 20:02:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/27 14:57:35 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/30 14:15:56 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,29 @@ int main(int argc, char *argv[])
         return (1);    
     }
     std::cout << BLUE << "new file '" << argv[1] << "' is created" << RESET << std::endl;
-     
-    while (std::getline(in, line))
-    {
-        std::size_t pos = 0;
-        while ((pos = line.find(s1, pos)) < line.length())
-        {
-            line.erase(pos, s1.length());
-            line.insert(pos, s2);
-            pos += s2.length();
-        }
-        out << line << std::endl;;
-    }
-    std::cout << GREEN << "All is done !" << RESET << std::endl;
+    
+	if (!*argv[3] || !*argv[2])
+	{
+		while (std::getline(in, line))
+		out << line << std::endl;;
+	}
+	else 
+	{
+		while (std::getline(in, line))
+		{
+			std::size_t pos = 0;
+			while ((pos = line.find(s1, pos)) < line.length())
+			{
+				line.erase(pos, s1.length());
+				line.insert(pos, s2);
+				pos += s2.length();
+			}
+			out << line << std::endl;;
+		}
+	}
 	
+	std::cout << GREEN << "All is done !" << RESET << std::endl;
+		
     in.close();
     out.close();
     return (0);
