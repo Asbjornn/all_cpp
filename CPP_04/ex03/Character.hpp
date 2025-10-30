@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 16:18:43 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/29 17:08:03 by gcauchy          ###   ########.fr       */
+/*   Created: 2025/10/30 10:40:04 by gcauchy           #+#    #+#             */
+/*   Updated: 2025/10/30 10:41:35 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
+
+#include <iostream>
 #include "ICharacter.hpp"
 
-int main()
-{
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	ICharacter* me = new Character("me");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	ICharacter* bob = new Character("bob");
-	me->use(0, *bob);
-	me->use(1, *bob);
-	delete bob;
-	delete me;
-	delete src;
-	return 0;
-}
+class ICharacter {
+    public:
+        
+};
+
+#endif
