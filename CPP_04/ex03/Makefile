@@ -6,7 +6,7 @@ CPP		= -std=c++98
 
 DIR_O	= file_o
 
-SRC		= main.cpp 
+SRC		= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp ICharacter.cpp IMateriaSource.cpp MateriaSource.cpp
 
 GREEN	= \033[1;92m
 RED		= \033[1;31m

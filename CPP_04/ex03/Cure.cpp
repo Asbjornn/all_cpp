@@ -6,13 +6,13 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:04:01 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 17:25:08 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 09:40:50 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(std::string const & type) : AMateria(type) {
+Cure::Cure() : AMateria("cure") {
     std::cout << "Cure constructor called" << std::endl;
 }
 
@@ -32,7 +32,7 @@ Cure::~Cure() {
 }
 
 AMateria* Cure::clone() const {
-    Cure* i = new Cure(this->_type);
+    Cure* i = new Cure();
     return i;
 }
 

@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.hpp                                      :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/30 10:40:04 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/30 17:26:22 by gcauchy          ###   ########.fr       */
+/*   Created: 2025/11/03 08:57:53 by gcauchy           #+#    #+#             */
+/*   Updated: 2025/11/03 09:09:56 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 
 #include <iostream>
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
-class Character : public ICharacter {
+class MateriaSource : public IMateriaSource {
     public:
-        Character(std::string& name);
-        Character(const Character& copy);
-        Character& operator=(const Character& other);
-        ~Character();
-
-        std::string const & getName() const;
-        void equip(AMateria* m);
-        void unequip(int idx);
-        void use(int idx, ICharacter& target);
+        MateriaSource();
+        MateriaSource(const MateriaSource& copy);
+        MateriaSource& operator=(const MateriaSource& other);
+        ~MateriaSource();
+    
+        void learnMateria(AMateria*);
+        AMateria* createMateria(std::string const & type);  
 
     private:
-        std::string name;
-        int         size;
         AMateria* materias[4];
 };
 

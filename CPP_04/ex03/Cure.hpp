@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:03:44 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 17:25:44 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 09:40:20 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cure : public AMateria{
     protected:
         
     public:
-        Cure(std::string const & type);
+        Cure();
         Cure(const Cure& copy);
         Cure& operator=(const Cure& other);
         ~Cure();

@@ -6,13 +6,13 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:02:49 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 17:25:24 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 09:41:28 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice(std::string const & type) : AMateria(type) {
+Ice::Ice() : AMateria("ice") {
     std::cout << "Ice constructor called" << std::endl;
 }
 
@@ -32,7 +32,7 @@ Ice::~Ice() {
 }
 
 AMateria* Ice::clone() const {
-    Ice* i = new Ice(this->_type);
+    Ice* i = new Ice();
     return i;
 }
 

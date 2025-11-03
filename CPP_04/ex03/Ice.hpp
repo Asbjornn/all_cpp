@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:03:16 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 17:25:33 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 09:41:15 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Ice : public AMateria {
     protected:
         
     public:
-        Ice(std::string const & type);
+        Ice();
         Ice(const Ice& copy);
         Ice& operator=(const Ice& other);
         ~Ice();
