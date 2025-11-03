@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 11:05:58 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 11:22:42 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 11:00:55 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ class FragTrap : public ClapTrap {
 	public:
 		FragTrap (std::string name);
 		FragTrap (const FragTrap& copy);
+		FragTrap&	operator=(const FragTrap& other);
 		~FragTrap ();
+		
 		void	highFivesGuys (void);
 };
 

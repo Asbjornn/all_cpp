@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 11:05:38 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 14:31:09 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 11:14:35 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,23 @@ FragTrap::FragTrap (const FragTrap& copy) : ClapTrap (copy) {
 	this->attack_damage = copy.attack_damage;
 }
 
+FragTrap&	FragTrap::operator=(const FragTrap& other) {
+	std::cout << "FragTrap copy assignment constructor called" << std::endl;
+	this->name = other.name;
+	this->hit_point = other.hit_point;
+	this->energy_point = other.energy_point;
+	this->attack_damage = other.attack_damage;
+
+	return *this;
+}
+
 void	FragTrap::highFivesGuys (void) {
+	if (this->hit_point <= 0)
+	{
+		std::cout << RED << "ScavTrap " << this->name << " is already";
+		std::cout << " dead " << RESET << std::endl;
+		return ;
+	}
 	std::cout << "FragTrap " << BLUE << this->name << RESET << " is asking gently for a high-fives !" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:22:58 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/15 15:33:38 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 10:50:19 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ ClapTrap::~ClapTrap() {
 }
 
 void	ClapTrap::attack(const std::string& target) {
+	if (target.empty())
+	{
+		std::cout << RED << "ClapTrap cannot attack an invisible enemy" << RESET << std::endl;
+		return ;
+	}
 	if (this->energy_point <= 0)
 	{
 		std::cout << ORANGE << "ClapTrap " << this->name << " is out of energy!" << RESET << std::endl;
@@ -63,6 +68,11 @@ void	ClapTrap::attack(const std::string& target) {
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
+	if (amount < 0)
+	{
+		std::cout << RED << "ClapTrap cannot take negative damage" << RESET << std::endl;
+		return ;
+	}
 	if (this->hit_point <= 0)
 	{
 		std::cout << RED << "ClapTrap " << this->name << " is already";
@@ -77,11 +87,16 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 	if (this->hit_point <= 0)
 	{
 		std::cout << "ClapTrap " << this->name << " have " << this->hit_point;
-		std::cout << " hit point and" << RED <<  " DIED " << RESET << "from his injuries" << std::endl;
+		std::cout << " hit point and" << RED <<  " DIES " << RESET << "from his injuries" << std::endl;
 	}
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
+	if (amount < 0)
+	{
+		std::cout << RED << "ClapTrap cannot repair itself with a negative value" << RESET << std::endl;
+		return ;
+	}
 	if (this->energy_point <= 0)
 	{
 		std::cout << ORANGE << "ClapTrap " << this->name << " is out of energy!" << RESET << std::endl;

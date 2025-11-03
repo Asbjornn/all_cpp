@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 11:32:53 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 14:34:20 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 14:00:12 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@
 class DiamondTrap : public ScavTrap, public FragTrap {
 	public:
 		DiamondTrap (std::string name);
+		DiamondTrap (const DiamondTrap& copy);
+		DiamondTrap& operator=(const DiamondTrap& other);
 		~DiamondTrap();
+		
 		void	whoAmI();
 
 	private:

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 11:05:58 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 15:21:49 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 13:38:38 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ class FragTrap : virtual public ClapTrap {
 	public:
 		FragTrap (std::string name);
 		FragTrap (const FragTrap& copy);
+		FragTrap&	operator=(const FragTrap& other);
 		~FragTrap ();
+		
 		void	highFivesGuys (void);
 		static const int	default_hit_point = 50;
-		static const int	default_attack_damage = 30;
+		static const int	default_attack_damage = 50;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:51 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 10:53:45 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 11:00:16 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 # define SCAVTRAP_HPP
 
 #include "iostream"
-#include "Colors.hpp"
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
 	public:
 		ScavTrap (std::string name);
 		ScavTrap (const ScavTrap& copy);
+		ScavTrap& operator=(const ScavTrap& other);
 		~ScavTrap ();
-		void	attack(const std::string& target) override;
+		
+		void	attack(const std::string& target);		// override the attack() from ClapTrap
 		void	guardGate ();
 };
 

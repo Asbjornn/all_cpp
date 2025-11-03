@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:34 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/16 10:58:26 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 11:04:22 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,22 @@ ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy) {
 	this->attack_damage = copy.attack_damage;
 }
 
+ScavTrap&	ScavTrap::operator=(const ScavTrap& other) {
+	std::cout << "ScavTrap copy assignment constructor called" << std::endl;
+	this->name = other.name;
+	this->hit_point = other.hit_point;
+	this->energy_point = other.energy_point;
+	this->attack_damage = other.attack_damage;
+
+	return *this;
+}
+
 void	ScavTrap::attack(const std::string& target) {
+	if (target.empty())
+	{
+		std::cout << RED << "ScavTrap cannot attack an invisible enemy" << RESET << std::endl;
+		return ;
+	}
 	if (this->energy_point <= 0)
 	{
 		std::cout << ORANGE << "ScavTrap " << this->name << " is out of energy!" << RESET << std::endl;
@@ -49,6 +64,12 @@ void	ScavTrap::attack(const std::string& target) {
 }
 
 void	ScavTrap::guardGate() {
+	if (this->hit_point <= 0)
+	{
+		std::cout << RED << "ScavTrap " << this->name << " is already";
+		std::cout << " dead " << RESET << std::endl;
+		return ;
+	}
 	std::cout << "ScavTrap " << BLUE << this->name << RESET <<" in now in ";
 	std::cout << BWHITE << "Gate keeper mode" << RESET << std::endl;
 
