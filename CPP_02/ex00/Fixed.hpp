@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 09:17:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/13 15:26:41 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/30 14:00:54 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 #include <iostream>
 
-class Fixed_point {
+class Fixed {
     public:
-    	Fixed_point();
-    	Fixed_point(const Fixed_point& copy);
-    	Fixed_point& operator=(const Fixed_point&);
-    	~Fixed_point();
+    	Fixed();
+    	Fixed(const Fixed& copy);
+    	Fixed& operator=(const Fixed&);
+    	~Fixed();
 	
     	int    getRawBits(void) const;
     	void    setRawBits(int const raw);

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 09:17:10 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/28 13:25:11 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/30 14:00:48 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main(void)
 {
-    Fixed_point a;
-    Fixed_point b(a);
-    Fixed_point c;
+    Fixed a;
+    Fixed b(a);
+    Fixed c;
 
     c = b;
 

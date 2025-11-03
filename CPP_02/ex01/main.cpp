@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 09:17:10 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/09/24 09:25:05 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/30 14:00:39 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int main(void)
 {
-    Fixed_point a;
-    Fixed_point const b(10);
-    Fixed_point const c(42.42f);
-    Fixed_point d(b);
+    Fixed a;
+    Fixed const b(10);
+    Fixed const c(42.42f);
+    Fixed d(b);
 
-    a = Fixed_point(1234.4321f);
+    a = Fixed(1234.4321f);
 
     std::cout << "a is " << a << std::endl;
     std::cout << "b is " << b << std::endl;

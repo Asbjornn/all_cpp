@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 10:10:08 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/13 14:34:14 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/10/30 14:13:22 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void)
     
     std::cout << "Value of string :" << std::endl;
     std::cout << s << std::endl;
-    std::cout << stringPTR << std::endl;
+    std::cout << *stringPTR << std::endl;
     std::cout << stringREF << std::endl;
 
     return (0);

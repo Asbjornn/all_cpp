@@ -6,12 +6,12 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:40:04 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/30 17:26:22 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 10:18:29 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+# define CHARACTER_HPP
 
 #include <iostream>
 #include "AMateria.hpp"
