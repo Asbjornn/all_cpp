@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:51 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 11:00:16 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/04 14:57:38 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class ScavTrap : public ClapTrap {
 	public:
+		ScavTrap(void);
 		ScavTrap (std::string name);
 		ScavTrap (const ScavTrap& copy);
 		ScavTrap& operator=(const ScavTrap& other);

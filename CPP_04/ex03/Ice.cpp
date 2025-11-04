@@ -6,29 +6,29 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:02:49 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 09:41:28 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 15:22:33 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
 Ice::Ice() : AMateria("ice") {
-    std::cout << "Ice constructor called" << std::endl;
+    // std::cout << "Ice constructor called" << std::endl;
 }
 
 Ice::Ice(const Ice& copy) : AMateria(copy) {
-    std::cout << "Ice copy constructor called" << std::endl;
+    // std::cout << "Ice copy constructor called" << std::endl;
     this->_type = copy._type;
 }
 
 Ice& Ice::operator=(const Ice& other) {
-    std::cout << "Ice copy assignment constructor called" << std::endl;
+    // std::cout << "Ice copy assignment constructor called" << std::endl;
     this->_type = other._type;
     return *this;
 }
 
 Ice::~Ice() {
-    std::cout << "Ice destructor called" << std::endl;
+    // std::cout << "Ice destructor called" << std::endl;
 }
 
 AMateria* Ice::clone() const {

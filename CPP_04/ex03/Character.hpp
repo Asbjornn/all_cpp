@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:40:04 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 10:18:29 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 15:27:47 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class Character : public ICharacter {
     public:
-        Character(std::string& name);
+        Character(std::string const & name);
         Character(const Character& copy);
         Character& operator=(const Character& other);
         ~Character();
@@ -30,8 +30,7 @@ class Character : public ICharacter {
         void use(int idx, ICharacter& target);
 
     private:
-        std::string name;
-        int         size;
+        std::string _name;
         AMateria* materias[4];
 };
 

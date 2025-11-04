@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:00:07 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/30 14:36:30 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 14:09:21 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter {
     public:

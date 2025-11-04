@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 08:57:53 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 10:18:12 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/03 15:18:39 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ class MateriaSource : public IMateriaSource {
         MateriaSource& operator=(const MateriaSource& other);
         ~MateriaSource();
     
-        void learnMateria(AMateria*);
+        void learnMateria(AMateria* m);
         AMateria* createMateria(std::string const & type);  
 
     private:
-        AMateria* materias[4];
+        AMateria*	materias[4];
 };
 
 #endif
