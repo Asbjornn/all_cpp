@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:34 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/04 17:27:32 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/05 09:37:35 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(void) {
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	std::cout << "ScavTrap constructor called" << std::endl;
-	
+
 	this->hit_point = 100;
 	this->energy_point = 50;
 	this->attack_damage = 20;
