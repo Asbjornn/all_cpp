@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 11:32:53 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/04 15:48:02 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:23:16 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		~DiamondTrap();
 		
 		void	whoAmI();
-		void	attack(const std::string& target);
 
 	private:
 		std::string name;

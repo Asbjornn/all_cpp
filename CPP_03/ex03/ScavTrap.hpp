@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:51 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/04 16:18:49 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:24:02 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ class ScavTrap : virtual public ClapTrap {
 		void	guardGate ();
 		
 	protected:
-		int	default_energy_points;
+		static const int	default_hit_points = 100;
+		static const int	default_energy_points = 50;
+		static const int	default_attack_damage = 20;
 };
 
 #endif

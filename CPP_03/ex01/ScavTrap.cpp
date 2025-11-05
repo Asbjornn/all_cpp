@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:53:34 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/04 14:57:08 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:29:30 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ScavTrap::ScavTrap(void) {
 	std::cout << "ScavTrap default constructor called" << std::endl;
-	this->name = "default";
+	this->name = "";
 	this->hit_point = 100;
 	this->energy_point = 50;
 	this->attack_damage = 20;
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(void) {
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	std::cout << "ScavTrap constructor called" << std::endl;
-	this->name = name;
+
 	this->hit_point = 100;
 	this->energy_point = 50;
 	this->attack_damage = 20;
@@ -30,19 +30,11 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
 ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy) {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	this->name = copy.name;
-	this->hit_point = copy.hit_point;
-	this->energy_point = copy.energy_point;
-	this->attack_damage = copy.attack_damage;
 }
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& other) {
 	std::cout << "ScavTrap copy assignment constructor called" << std::endl;
-	this->name = other.name;
-	this->hit_point = other.hit_point;
-	this->energy_point = other.energy_point;
-	this->attack_damage = other.attack_damage;
-
+	ClapTrap::operator=(other);
 	return *this;
 }
 
