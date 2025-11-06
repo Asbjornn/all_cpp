@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:02:49 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 15:22:33 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 13:12:44 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ Ice::~Ice() {
 }
 
 AMateria* Ice::clone() const {
-    Ice* i = new Ice();
-    return i;
+    return (new Ice(*this));
 }
 
 void    Ice::use(ICharacter& target) {

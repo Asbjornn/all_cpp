@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:51:44 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/24 16:10:06 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 11:46:39 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Cat : public Animal {
 		~Cat();
 		
 		void	makeSound(void) const;
+		void	setBrain(const Brain& brain);
+		Brain&	getBrain(void) const;
 	
 	private:
 		Brain*	_brain;

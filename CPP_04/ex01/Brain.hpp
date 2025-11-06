@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:29:53 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/24 16:05:19 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 11:21:22 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class Brain {
         Brain(const Brain& copy);
         Brain& operator=(const Brain& other);
         ~Brain();
+
+		void	setIdea(std::string const & idea, int id);
+		std::string	getIdea(int id);
     
     private:
         std::string ideas[100];

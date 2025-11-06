@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:16:23 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/21 17:24:01 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 12:13:29 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class WrongAnimal {
 		WrongAnimal(const WrongAnimal& copy);
 		WrongAnimal& operator=(const WrongAnimal& other);
 		virtual ~WrongAnimal();
+		
 		void	        makeSound(void) const ; // pas le virtual
 		std::string		getType(void) const ;
 		

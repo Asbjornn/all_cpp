@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:53:50 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/21 17:09:51 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 11:36:45 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ Cat::Cat(const Cat& copy) : Animal(copy) {
 
 Cat& Cat::operator=(const Cat& other) {
     std::cout << "Cat copy assignment operrator called" << std::endl;
-    this->type = other.type;
+	if (this != &other)
+    	this->type = other.type;
+		
     return *this;
 }
 

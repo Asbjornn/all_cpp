@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:39:55 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 16:19:59 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 13:21:41 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ Character& Character::operator=(const Character& other) {
 
 Character::~Character() {
     std::cout << "Character " << this->getName() << " is destroyed" << std::endl;
+	for (int i = 0; i < 4; i++)
+		if (this->materias[i])
+			delete this->materias[i];
+	
 }
 
 std::string const & Character::getName() const {
@@ -64,6 +68,7 @@ void Character::equip(AMateria *m) {
         }
     }
     std::cout << "Already reached 4 materias in inventory" << std::endl;
+	delete m;
 }
 
 void Character::unequip(int idx) {

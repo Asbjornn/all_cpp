@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 08:58:55 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 15:34:16 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 13:16:36 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
 
 MateriaSource::~MateriaSource() {
     // std::cout << "MateriaSource destructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+		if (this->materias[i])
+			delete materias[i];
+	
 }
 
 void    MateriaSource::learnMateria(AMateria* m) {
