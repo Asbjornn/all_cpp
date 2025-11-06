@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:18:43 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/06 13:44:47 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 14:04:51 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ int main() {
 	std::cout << "\n--- Copy use ---\n";
 	clone.use(0, *bob);
 	clone.use(1, *bob);
-
-	std::cout << "\n--- Delete original ---\n";
 
 	separator("All delete");
 	delete me;

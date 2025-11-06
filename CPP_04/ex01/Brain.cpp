@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:29:40 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/06 11:32:11 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 14:03:56 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ std::string	Brain::getIdea(int id) {
 	if (id >= 0 && id < 100)
 		return ideas[id];
 	else
-		std::cout << "index is out of bound" << std::endl;
+		std::cout << "index is out of bound";
 	return "";
 }
