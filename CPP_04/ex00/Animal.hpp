@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:54:03 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/21 17:23:55 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/05 15:42:36 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Animal {
 		Animal(const Animal& copy);
 		Animal& operator=(const Animal& other);
 		virtual	~Animal();
+		
 		virtual void	makeSound(void) const ;
 		std::string		getType(void) const ;
 		

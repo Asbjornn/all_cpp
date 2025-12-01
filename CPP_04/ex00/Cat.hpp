@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:51:44 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/10/21 17:08:01 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/05 15:43:12 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Cat : public Animal {
 		Cat(const Cat& copy);
 		Cat& operator=(const Cat& other);
 		~Cat();
+		
 		void	makeSound(void) const;
 };
 

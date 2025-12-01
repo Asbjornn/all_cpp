@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 16:18:43 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 16:17:14 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 14:04:51 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void separator(std::string const &title) {
 }
 
 int main() {
-	separator("Creation et apprentissage de Materias");
+	separator("Creation and learn Materias");
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -31,7 +31,7 @@ int main() {
 	src->learnMateria(new Cure());
 	src->learnMateria(new Ice()); // devrait être ignoré (inventaire plein)
 
-	separator("Creation de personnages");
+	separator("Character creation");
 	ICharacter* me = new Character("me");
 	ICharacter* bob = new Character("bob");
 
@@ -40,17 +40,17 @@ int main() {
 	AMateria* cure = src->createMateria("cure");
 	AMateria* unknown = src->createMateria("fire"); // devrait renvoyer NULL
 
-	std::cout << "Creation de 'fire': " 
-	          << (unknown ? "SUCCES (ERREUR)" : "ECHEC (OK)") << std::endl;
+	if (!unknown)
+		std::cout << "unknow is : " << unknown << std::endl;
 
-	separator("Equipement de Materias");
+	separator("Equip Materias");
 	me->equip(ice);
 	me->equip(cure);
 	me->equip(src->createMateria("ice"));
 	me->equip(src->createMateria("cure"));
 	me->equip(src->createMateria("ice")); // devrait échouer (inventaire plein)
 
-	separator("Utilisation de Materias");
+	separator("Use Materias");
 	me->use(0, *bob);
 	me->use(1, *bob);
 	me->use(2, *bob);
@@ -63,28 +63,25 @@ int main() {
 	me->equip(src->createMateria("cure")); // on remet cure
 	me->use(1, *bob);
 
-	separator("Test de copie profonde (deep copy)");
+	separator("Test deep copy");
 	Character tmp("tmp");
 	tmp.equip(src->createMateria("ice"));
 	tmp.equip(src->createMateria("cure"));
 	Character clone = tmp; // opérateur de copie
 
-	std::cout << "\n--- Utilisation avec l'original ---\n";
+	std::cout << "\n--- Original use ---\n";
 	tmp.use(0, *bob);
 	tmp.use(1, *bob);
 
-	std::cout << "\n--- Utilisation avec la copie ---\n";
+	std::cout << "\n--- Copy use ---\n";
 	clone.use(0, *bob);
 	clone.use(1, *bob);
 
-	std::cout << "\n--- Suppression de l'original (pour vérifier la copie indépendante) ---\n";
-
-	separator("Nettoyage memoire");
+	separator("All delete");
 	delete me;
 	delete bob;
 	delete src;
-	// delete unknown; // juste par sécurité
-	std::cout << "\nTous les objets ont ete detruits proprement ✅\n";
+	delete cure;
 
 	return 0;
 }

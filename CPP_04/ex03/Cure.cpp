@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:04:01 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/03 15:22:27 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/06 14:10:09 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,11 @@ Cure& Cure::operator=(const Cure& other) {
 }
 
 Cure::~Cure() {
-    std::cout << "Cure destructor called" << std::endl;
+    // std::cout << "Cure destructor called" << std::endl;
 }
 
 AMateria* Cure::clone() const {
-    Cure* i = new Cure();
-    return i;
+    return (new Cure(*this));
 }
 
 void    Cure::use(ICharacter& target) {

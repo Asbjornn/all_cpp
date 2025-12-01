@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:22:58 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/04 17:19:32 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/11/05 10:29:24 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,7 @@ void	ClapTrap::attack(const std::string& target) {
 	std::cout << "ClapTrap have " << YELLOW << this->energy_point << " energy point left" << RESET <<std::endl;
 }
 
-void	ClapTrap::takeDamage(unsigned int amount) {
-	if (amount < 0)
-	{
-		std::cout << RED << "ClapTrap cannot take negative damage" << RESET << std::endl;
-		return ;
-	}
+void	ClapTrap::takeDamage(unsigned int amount) { 
 	if (this->hit_point <= 0)
 	{
 		std::cout << RED << "ClapTrap " << this->name << " is already";
@@ -100,11 +95,6 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
-	if (amount < 0)
-	{
-		std::cout << RED << "ClapTrap cannot repair itself with a negative value" << RESET << std::endl;
-		return ;
-	}
 	if (this->energy_point <= 0)
 	{
 		std::cout << ORANGE << "ClapTrap " << this->name << " is out of energy!" << RESET << std::endl;
