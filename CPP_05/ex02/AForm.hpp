@@ -18,7 +18,13 @@
 
 class Bureaucrat;
 
-class AForm {
+class AForm
+{
+	const std::string   _name;
+	bool                _is_signed;
+	const int           _grade_min_sign;
+	const int           _grade_min_exec;
+
     public:
         // Constructors & Destructors
         AForm();
@@ -54,12 +60,6 @@ class AForm {
             public:
                 virtual char const  *what(void) const throw();
         };
-    
-    private:
-        const std::string   _name;
-        bool                _is_signed;
-        const int           _grade_min_sign;
-        const int           _grade_min_exec;
 };
 
 std::ostream& operator<<(std::ostream& out, const AForm& Aform);

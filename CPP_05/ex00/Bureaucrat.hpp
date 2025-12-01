@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 09:54:55 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/28 15:39:18 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/01 15:53:48 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 class Bureaucrat
 {
+	const std::string   _name;
+	int                 _grade;
+	
     public:
         // Constructors & Destructors
         Bureaucrat();
@@ -25,8 +28,8 @@ class Bureaucrat
         // Functions
         int         get_grade() const;
         std::string get_name() const;
-        void                up_grade();
-        void                down_grade();
+        void        up_grade();
+        void        down_grade();
 
         // Exceptions
         class GradeTooHighException: public std::exception
@@ -39,10 +42,6 @@ class Bureaucrat
             public:
                 virtual char const  *what(void) const throw();
         };
-        
-    private:
-        const std::string   _name;
-        int                 _grade;
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& Bu);

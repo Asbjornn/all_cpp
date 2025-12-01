@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 09:54:55 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/11/28 15:41:21 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/01 15:47:04 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ class Form;
 
 class Bureaucrat
 {
+	const std::string   _name;
+	int                 _grade;
+	
     public:
         // Constructors & Destructors
         Bureaucrat();
@@ -46,10 +49,6 @@ class Bureaucrat
             public:
                 virtual char const  *what(void) const throw();
         };
-        
-    private:
-        const std::string   _name;
-        int                 _grade;
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& Bu);

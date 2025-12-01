@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 13:56:16 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/01 15:35:56 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/01 10:45:28 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void    AForm::execute(Bureaucrat const & execute) const {
     else if (execute.get_grade() > this->get_grade_exec())
         throw (AForm::GradeTooLowException());
     else {
-        std::cout << execute.get_name() << " execute " << this->get_name() << std::endl;
+        std::cout << execute.get_name() << " execute form " << this->get_name() << std::endl;
         this->beExecute(execute);
     }
 }

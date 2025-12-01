@@ -1,4 +1,4 @@
-NAME	= forms
+NAME	= intern
 
 CC		= c++
 FLAG	= -Wall -Wextra -Werror -g
@@ -6,7 +6,7 @@ CPP		= -std=c++98
 
 DIR_O	= file_o
 
-SRC		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 GREEN	= \033[1;92m
 RED		= \033[1;31m
