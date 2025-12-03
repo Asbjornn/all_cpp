@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 18:09:16 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/01 11:42:53 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/03 17:27:02 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void    RobotomyRequestForm::beExecute(Bureaucrat const & executor) const {
 	std::cout << "DDDRRRRLLLLLLL BBZZZZZ DDRRLLLLLLL DDRRRLLL" << std::endl;
 	srand(time(0));
 	int	r = rand() % 100;
-	std::cout << "random = " << r << std::endl;
+	// std::cout << "random = " << r << std::endl;
 	if (r < 49)
 		std::cout << this->_target << " has been robotomized successfully !" << std::endl;
 	else
