@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 09:28:20 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/02 16:01:10 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/10 11:12:15 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ScalarConverter::ScalarConverter() {};
 
 ScalarConverter::ScalarConverter(const ScalarConverter& copy) {
     (void)copy;
-} ;
+};
 
 ScalarConverter&    ScalarConverter::operator=(const ScalarConverter& other) {
     (void)other;
