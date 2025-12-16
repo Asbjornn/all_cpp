@@ -6,7 +6,7 @@ CPP		= -std=c++98
 
 DIR_O	= file_o
 
-SRC		= main.cpp ScalarConverter.cpp
+SRC		= main.cpp ScalarConverters.cpp
 
 GREEN	= \033[1;92m
 RED		= \033[1;31m

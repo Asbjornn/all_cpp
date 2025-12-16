@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 15:57:16 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/03 16:24:13 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/16 10:13:20 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ Base* generate(void) {
         std::cout << "Problem with generation" << std::endl;
         return nullptr;
     }
-    return nullptr;
 }
 
 void    identify(Base* p) {
@@ -84,7 +83,7 @@ int main(void) {
     
     Base* base = generate();
     identify(base);
-    identify(*base);    
+    identify(*base);
     delete base;
 
     return 0;
