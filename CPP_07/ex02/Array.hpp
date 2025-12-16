@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 09:24:25 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/05 09:43:33 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/16 10:35:36 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,43 +16,54 @@
 #include <iostream>
 
 template <typename T>
-class Arrayy {
+class Array {
         T*  _array;
+        unsigned int _size;
     
     public:
-        Array() {
-            this->_array = new T[];
+        Array() : _array(nullptr), _size(0) {
         };
         
-        Array(unsigned int n) {
-            this->_array = new T[n];
+        Array(unsigned int n) : _array(new T[n]), _size(n) {
         };
         
-        Array(const Arrayy& copy) {
-            this->_array = new copy->get_array();
+        Array(const Array& copy) : _array(new T[copy._size]), _size(copy._size) {
+            for (unsigned int i = 0; i < _size; i++)
+                _array[i] = copy._array[i]; 
         };
         
         ~Array() {
-            delete[] this->_array;
+            delete[] _array;
         };
 
-        Arrayy&  operator=(const Arrayy& other) {
-            if (*this != other) {
-                this->_array = new copy->get_array();
+        Array&  operator=(const Array& other) {
+            if (this != &other) {
+                delete[] _array;
+
+                _size = other._size;
+                _array = new T[other._size];
+                for (unsigned int i = 0; i < _size; i++)
+                    _array[i] = other._array[i];
             }
             return *this;
         };
-
-        int    size() const {
-            int i;
-            for (i = 0; this->_array[i]; i++)
-                ;
-            return i;
+            
+        class IndexOutOfBounds: public std::exception {
+            public:
+                virtual char const *what(void) const throw() {
+                    return "Exception index out of bounds";
+                }
+        };
+            
+        unsigned int    size() const {
+            return _size;
         };
 
-        T*  get_array() const {
-            return this->_array;
-        }
+        T& operator[](unsigned int i) {
+            if (i >= _size)  
+                throw Array::IndexOutOfBounds();
+            return _array[i];
+        };
 };
 
 #endif
