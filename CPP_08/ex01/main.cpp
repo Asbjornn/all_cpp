@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/16 10:47:54 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 09:33:09 by gcauchy          ###   ########.fr       */
+/*   Created: 2025/12/22 09:36:33 by gcauchy           #+#    #+#             */
+/*   Updated: 2025/12/22 10:50:09 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#include "Span.hpp"
 
-#include <iostream>
+int main(void) {
+    Span sp = Span(5);
 
-template <typename T>
-void easyfind(const T& container, int n) {
-    for (typename T::const_iterator i = container.begin(); i != container.end() ; i++)
-        if (*i == n)
-            return ;
+    sp.addNumber(6);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
+    sp.addNumber(11);
 
-    throw 1;
+    std::cout << sp.shortestSpan() << std::endl;
+    std::cout << sp.longestSpan() << std::endl;
+    
+    return 0;
 }
-
-#endif
