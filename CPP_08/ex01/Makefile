@@ -1,7 +1,7 @@
 NAME	= span
 
 CC		= c++
-FLAG	= -Wall -Wextra -Werror
+FLAG	= -Wall -Wextra -Werror -g
 CPP		= -std=c++98
 
 DIR_O	= file_o
