@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 09:23:59 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/16 10:43:05 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/02 14:39:01 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void) {
     for (unsigned int i = 0; i < oui.size(); i++)
         std::cout << oui[i];
 
-    std::cout << "\noui.size() = " << oui.size() << std::endl;
+    std::cout << std::endl << "oui.size() = " << oui.size() << std::endl;
 
     try
     {

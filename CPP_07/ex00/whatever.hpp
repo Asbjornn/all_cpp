@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 09:30:41 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/04 11:23:44 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/02 14:31:44 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ void    swap(T& a, T& b) {
     b = tmp;
 }
 
-template <typename U>
-U   min(U& a, U& b) {
+template <typename T>
+T   min(T& a, T& b) {
     if (a < b)
         return a;
     return b;
 }
 
-template <typename V>
-V   max(V& a, V& b) {
+template <typename T>
+T   max(T& a, T& b) {
     if (a > b)
         return a;
     return b;
