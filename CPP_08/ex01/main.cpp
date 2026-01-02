@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 09:36:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 15:39:51 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/22 16:50:08 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ int main(void) {
 		std::cerr << e.what() << '\n';
 	}
 
-    std::cout << sp.shortestSpan() << std::endl;
-    std::cout << sp.longestSpan() << std::endl;
+    std::cout << "\nShortest span : " << sp.shortestSpan() << std::endl;
+    std::cout << "Longest span : " << sp.longestSpan() << std::endl << std::endl;
 
 	Span span = Span(10);
+	srand(time(0));
 	
 	try
 	{
@@ -43,8 +44,20 @@ int main(void) {
 		std::cerr << e.what() << '\n';
 	}
 
-	std::cout << span.shortestSpan() << std::endl;
-    std::cout << span.longestSpan() << std::endl;
+	for (unsigned int i = 0; i < span.getSize(); i++)
+	{
+		try	
+		{	
+			std::cout << "Index " << i << ": " << span.peek(i) << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+	}
+
+	std::cout << "\nShortest span : " << span.shortestSpan() << std::endl;
+    std::cout << "Longest span : " << span.longestSpan() << std::endl;
 	
     
     return 0;

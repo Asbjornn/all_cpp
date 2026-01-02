@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 10:47:54 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 09:33:09 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/02 13:50:56 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define EASYFIND_HPP
 
 #include <iostream>
+
+// --- Template function
 
 template <typename T>
 void easyfind(const T& container, int n) {

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 09:35:39 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 15:38:38 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/26 17:17:10 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 
 // --- Constructors & Destructors ---
 
-Span::Span() : _size(0), _pos(0) {
+Span::Span() : _size(0) {
 	_vector.reserve(0);
 }
 
-Span::Span(unsigned int value) : _size(value), _pos(0) {
+Span::Span(unsigned int value) : _size(value) {
 	_vector.reserve(getSize());
 }
 
-Span::Span(const Span& copy) : _vector(copy._vector), _size(copy._size), _pos(copy._pos) {
+Span::Span(const Span& copy) : _vector(copy._vector), _size(copy._size) {
 }
 
 Span& Span::operator=(const Span& other) {
 	if (this != &other)
-		*this = other;
+	{
+		_vector = other._vector;
+		_size = other._size;
+	}
 	return *this;
 }
 
@@ -39,31 +42,18 @@ Span::~Span() {
 // --- Functions ---
 
 void    Span::addNumber(unsigned int value) {
-	if (getPos() + 1 > _size)
+	if (_vector.size() >= _size)
 		throw SpanIsFull();
 	_vector.push_back(value);
-	_pos++;
-	std::cout << "1" << std::endl;
 }
 
 void	Span::multipleNumber(unsigned int range) {
-	srand(time(0));
 	for (unsigned int i = 0; i != range; i++)
-	{
-		try
-		{
-			addNumber(i);
-		}
-		catch(const std::exception& e)
-		{
-			std::cerr << e.what() << '\n';
-		}
-	}
-	
+		addNumber(rand() % 1000);
 }
 
 unsigned int    Span::shortestSpan() {
-	if (getSize() <= 1)
+	if (_vector.size() <= 1)
 		throw SpanTooSmall();
 
 	std::vector<unsigned int> v(this->_vector);
@@ -80,25 +70,23 @@ unsigned int    Span::shortestSpan() {
 }
 
 unsigned int    Span::longestSpan() {
-	std::vector<unsigned int> v(this->_vector);
-	unsigned int    small;
-	unsigned int    big;
+	if (_vector.size() <= 1)
+		throw SpanTooSmall();
 	
-	std::sort (v.begin(), v.end());
-	small = *v.begin();
+	unsigned int min = *std::min_element(_vector.begin(), _vector.end());
+	unsigned int max = *std::max_element(_vector.begin(), _vector.end());
 
-	std::sort (v.rbegin(), v.rend());
-	big = *v.begin();
-
-	return (big - small);
+	return (max - min);
 }
 
 unsigned int    Span::getSize() {
 	return this->_size;
 }
 
-unsigned int    Span::getPos() {
-	return this->_pos;
+unsigned int	Span::peek(unsigned int index) const {
+	if (index >= _vector.size())
+		throw IndexOutOfBounds();
+	return _vector[index];
 }
 
 
@@ -110,4 +98,8 @@ char const *Span::SpanIsFull::what(void) const throw() {
 
 char const  *Span::SpanTooSmall::what(void) const throw() {
 	return "Not enough things in the Span";
+}
+
+char const  *Span::IndexOutOfBounds::what(void) const throw() {
+	return "Index out of bounds";
 }

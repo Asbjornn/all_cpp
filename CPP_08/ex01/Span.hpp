@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Span.hpp                                           :+:      :+:    :+:   */
+/*   SPan.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 09:35:59 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 15:37:17 by gcauchy          ###   ########.fr       */
+/*   Updated: 2025/12/22 16:33:55 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 #include <vector>
 #include <algorithm>
 #include <climits>
+#include <time.h>
 
 class Span {
     std::vector<unsigned int>    _vector;
     unsigned int        _size;
-    unsigned int        _pos;
 
     public:
         // --- Constructors & Destructors ---
@@ -39,7 +39,8 @@ class Span {
         unsigned int longestSpan();
         
         unsigned int getSize();
-        unsigned int getPos();
+
+        unsigned int peek(unsigned int index) const;
 
         // --- Exception ---
         class SpanIsFull : public std::exception {
@@ -48,6 +49,11 @@ class Span {
         };
 
         class SpanTooSmall : public std::exception {
+            public:
+                virtual char const  *what(void) const throw();
+        };
+
+        class IndexOutOfBounds : public std::exception {
             public:
                 virtual char const  *what(void) const throw();
         };
