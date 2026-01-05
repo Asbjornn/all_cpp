@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 09:24:25 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/16 10:35:36 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/05 12:48:10 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Array {
         unsigned int _size;
     
     public:
-        Array() : _array(nullptr), _size(0) {
+        Array() : _array(new T[0]()), _size(0) {
         };
         
         Array(unsigned int n) : _array(new T[n]), _size(n) {
