@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:37:26 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 17:43:18 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/05 14:10:17 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,18 @@ int main(int argc, char *argv[]) {
 
     PmergeMe pmerge;
 
+	try
+	{
+		pmerge.fill(argc, argv);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+		return 1;
+	}
+
+	std::cout << "Before : ";
+	pmerge.display_vector();
+	
     return 0;
 }
