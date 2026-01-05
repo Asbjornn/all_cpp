@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/26 17:21:14 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/02 14:30:48 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/05 16:17:56 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int main()
     list.push_back(5);
     list.push_back(17);
     
-    std::cout << "Top element of list: " << list.front() << std::endl;
+    std::cout << "Top element of list: " << list.back() << std::endl;
     list.pop_back();
     std::cout << "Size of list: " << list.size() << std::endl << std::endl;
     
