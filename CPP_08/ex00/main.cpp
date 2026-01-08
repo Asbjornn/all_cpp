@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 10:47:24 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/08 09:54:42 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/08 10:51:45 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int main(void) {
         easyfind(tab, 40);
         std::cout << "40 is found in tab" << std::endl;
     }
-    catch(...)
-    {
-        std::cout << "easyfind did not found" << std::endl;
-    }
+    catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 
     std::cout << std::endl << " ---  Deque test ---" << std::endl;
     std::deque<int> tab2;
@@ -44,10 +45,10 @@ int main(void) {
         easyfind(tab2, 5);
         std::cout << "40 is found in tab2" << std::endl;
     }
-    catch(...)
-    {
-        std::cout << "easyfind did not found" << std::endl;
-    }
+    catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
     
     return 0;
 }
