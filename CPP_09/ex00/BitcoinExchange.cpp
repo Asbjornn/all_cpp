@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 15:22:39 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 16:09:07 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/08 10:06:45 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Btc::Btc() {
 		try
 		{
 			float value = std::stof(s_value);
-			set_data(date, value);
+			data.insert(std::make_pair(date, value));
 		}
 		catch(...)
 		{
@@ -67,10 +67,6 @@ Btc::~Btc() {}
 
 
 // --- Functions ---
-
-void    Btc::set_data(std::string date, float value) {
-	data.insert(std::make_pair(date, value));
-}
 
 const std::map<std::string, float>& Btc::get_data() const {
 	return this->data;

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 14:44:56 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 16:20:38 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/08 10:06:51 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 class Btc {
     std::map<std::string, float> data;
     
-    void    set_data(std::string date, float value);
     float    find_date(std::string date);
     
     public:
