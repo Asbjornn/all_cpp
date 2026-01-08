@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 09:35:39 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/26 17:17:10 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/08 09:55:31 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Span::Span() : _size(0) {
 	_vector.reserve(0);
 }
 
-Span::Span(unsigned int value) : _size(value) {
-	_vector.reserve(getSize());
+Span::Span(unsigned int size) : _size(size) {
+	_vector.reserve(size);
 }
 
 Span::Span(const Span& copy) : _vector(copy._vector), _size(copy._size) {
@@ -34,9 +34,7 @@ Span& Span::operator=(const Span& other) {
 	return *this;
 }
 
-Span::~Span() {
-	
-}
+Span::~Span() {}
 
 
 // --- Functions ---

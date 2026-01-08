@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SPan.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 09:35:59 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 16:33:55 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/08 09:42:52 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Span {
         
         // --- Functions ---
         void addNumber(unsigned int value);
-		void multipleNumber(unsigned int range);
+        void multipleNumber(unsigned int range);
         
         unsigned int shortestSpan();
         unsigned int longestSpan();
