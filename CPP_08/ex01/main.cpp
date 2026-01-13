@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 09:36:33 by gcauchy           #+#    #+#             */
-/*   Updated: 2025/12/22 16:50:08 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/08 10:56:01 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(void) {
 		std::cerr << e.what() << '\n';
 	}
 
-    std::cout << "\nShortest span : " << sp.shortestSpan() << std::endl;
+    std::cout << std::endl << "Shortest span : " << sp.shortestSpan() << std::endl;
     std::cout << "Longest span : " << sp.longestSpan() << std::endl << std::endl;
 
 	Span span = Span(10);
@@ -56,7 +56,7 @@ int main(void) {
 		}
 	}
 
-	std::cout << "\nShortest span : " << span.shortestSpan() << std::endl;
+	std::cout << std::endl << "Shortest span : " << span.shortestSpan() << std::endl;
     std::cout << "Longest span : " << span.longestSpan() << std::endl;
 	
     
