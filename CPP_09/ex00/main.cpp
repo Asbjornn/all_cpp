@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 14:44:38 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 16:10:57 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/13 10:32:07 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,6 @@ int main(int argc, char *argv[]) {
 		std::cerr << e.what() << '\n';
 		return 1;
 	}
-
-	// for (std::map<std::string, float>::const_iterator it = btc.get_data().begin(); it != btc.get_data().end(); it++)
-	// {
-	// 	std::cout << it->first << ":" << it->second << std::endl;
-	// }
 	
 	in.close();
 	return 0;

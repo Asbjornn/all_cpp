@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:37:26 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/12 16:19:16 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/13 10:23:21 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ int main(int argc, char *argv[]) {
 	
 	std::cout << "After  : ";
 	pmerge.display(pmerge.get_vector());
-	std::cout	<< "Merge insertion sort time with std::vector : ["
+	std::cout	<< "Time to process a range of " << argc - 1 << " elements with std::vector : "
 				<< std::fixed << std::setprecision(5) << elapsed 
-				<< "] us" << std::endl;
+				<< " us" << std::endl;
 
 	// deque
 	std::cout << std::endl << "Before : ";
@@ -82,9 +82,9 @@ int main(int argc, char *argv[]) {
 	
 	std::cout << "After  : ";
 	pmerge.display(pmerge.get_deque());
-	std::cout	<< "Merge insertion sort time with std::deque : ["
+	std::cout	<< "Time to process a range of " << argc - 1 << " elements with std::deque : "
 				<< std::fixed << std::setprecision(5) << elapsed 
-				<< "] us" << std::endl;
+				<< " us" << std::endl;
 	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 15:22:39 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/08 10:06:45 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/13 10:50:28 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,6 +157,10 @@ void	Btc::use_input(std::ifstream& in) {
 	while (std::getline(in, line)) {
 		if (first_line)
 		{
+			if (line != "date | value") {
+				std::cerr << "Error: expect format 'date | value' first line" << std::endl;
+				return ;
+			}
 			first_line = false;
 			continue ;
 		}
@@ -188,6 +192,6 @@ void	Btc::use_input(std::ifstream& in) {
 			continue ;
 		}
 
-		std::cout << date << "=> " << value * find_date(date) << std::endl;
+		std::cout << date << " => " << value << " = " << value * find_date(date) << std::endl;
 	}
 }

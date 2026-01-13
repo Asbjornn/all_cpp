@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:35:30 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/07 19:27:21 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/13 12:12:42 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <ctime>
 #include <sys/time.h>
 #include <iomanip>
+#include <algorithm>
 
 class PmergeMe {
 	std::vector<int>	_vector;
