@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:37:26 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/07 19:29:29 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/12 16:19:16 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ static bool valid_input(int argc, char *argv[]) {
 			}
 	}
 	return true;
+}
+
+static long long get_time() {
+	struct timeval t;
+	
+	gettimeofday(&t, NULL);
+	return t.tv_sec * 1000000 + t.tv_usec;
 }
 
 int main(int argc, char *argv[]) {
@@ -52,10 +59,10 @@ int main(int argc, char *argv[]) {
 	std::cout << "Before : ";
 	pmerge.display(pmerge.get_vector());
 	
-	clock_t time1 = clock();
+	long long time1 = get_time();
 	pmerge.solve_vector();
-	clock_t time2 = clock();
-	double elapsed = (double)(time2 - time1) * 1000000.0L / CLOCKS_PER_SEC;
+	long long time2 = get_time();
+	double elapsed = (double)(time2 - time1);
 	
 	std::cout << "After  : ";
 	pmerge.display(pmerge.get_vector());
@@ -67,10 +74,11 @@ int main(int argc, char *argv[]) {
 	std::cout << std::endl << "Before : ";
 	pmerge.display(pmerge.get_deque());
 
-	time1 = clock();
+	time1 = get_time();
 	pmerge.solve_deque();
-	time2 = clock();
-	elapsed = (double)(time2 - time1) * 1000000.0L / CLOCKS_PER_SEC;
+	time2 = get_time();
+	elapsed = (double)(time2 - time1);
+
 	
 	std::cout << "After  : ";
 	pmerge.display(pmerge.get_deque());
