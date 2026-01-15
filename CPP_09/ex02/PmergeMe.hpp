@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:35:30 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/13 12:12:42 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/15 12:42:16 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <sys/time.h>
 #include <iomanip>
 #include <algorithm>
+#include <limits.h>
 
 class PmergeMe {
 	std::vector<int>	_vector;
@@ -33,12 +34,13 @@ class PmergeMe {
 		~PmergeMe();
 
 		// --- Functions ---
-		void	fill(int argc, char *argv[]);
-			// --- Vector ---
-		void	solve_vector();
+		// --- Vector ---
+		void				fill_vector(int argc, char *argv[]);
+		void				solve_vector();
 		std::vector<int>	get_vector() const;
 			// --- Deque ---
-		void	solve_deque();
+		void			fill_deque(int argc, char *argv[]);
+		void			solve_deque();
 		std::deque<int>	get_deque() const;
 		
 		template <typename C>

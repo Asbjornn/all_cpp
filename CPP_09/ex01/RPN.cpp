@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 15:59:15 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 17:34:05 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/15 10:39:40 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static bool is_token(char c) {
 }
 
 void	RPN::do_operation(char token) {
-	int first = 0, second = 0, result = 0;
+	double first = 0, second = 0, result = 0;
 
 	second = stack.top();
 	stack.pop();

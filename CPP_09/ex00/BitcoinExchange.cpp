@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 15:22:39 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/13 10:50:28 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/15 10:25:09 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ Btc::Btc() {
 		catch(...)
 		{
 			std::string error =  "Invalid value: " + s_value;
+			in.close();
 			throw std::runtime_error(error);
 		}
 	}
@@ -57,9 +58,7 @@ Btc::Btc(const Btc& copy) {
 
 Btc& Btc::operator=(const Btc& other) {
 	if (this != &other)
-	{
 		this->data = other.data;
-	}
 	return *this;
 }
 

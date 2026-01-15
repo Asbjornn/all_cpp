@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 15:58:13 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 17:24:50 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/15 10:38:23 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <stack>
 
 class RPN {
-	std::stack<int> stack;
+	std::stack<double> stack;
 
 	public:
 		// --- Constructors & Destructors ---

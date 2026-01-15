@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 17:35:21 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/13 16:13:29 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/15 12:38:49 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,14 @@ PmergeMe::~PmergeMe() {}
 
 // --- Functions ---
 
-void	PmergeMe::fill(int argc, char *argv[]) {
+// === Vector algo ===
+void	PmergeMe::fill_vector(int argc, char *argv[]) {
 	for (int i = 1; i < argc; i++) {
-		try
-		{
-			std::string n = argv[i];
-			// add numbers in the vector and deque
-			this->_vector.push_back(std::stoi(n));
-			this->_deque.push_back(std::stoi(n));
-		}
-		catch(const std::exception& e)
-		{
-			std::cerr << e.what() << '\n';
-			return ;
-		}
+		std::string n = argv[i];
+		this->_vector.push_back(std::stoi(n));
 	}
 }
 
-
-// === Vector algo ===
 static std::vector<int> jacob_sequence_vector(int size) {
 	std::vector<int> jacob;
 	jacob.push_back(1);
@@ -77,7 +66,7 @@ static std::vector<int> order_vector(int size) {
 	return order;
 }
 
-static std::vector<int>	recursive(std::vector<int> v) {
+static std::vector<int>	recursive_vector(std::vector<int> v) {
 	if (v.size() <= 1)
 		return v;
 
@@ -110,7 +99,7 @@ static std::vector<int>	recursive(std::vector<int> v) {
 		big.push_back(v.back());
 
 	// Recursive call on big
-	big = recursive(big);
+	big = recursive_vector(big);
 
 	// Insert all the small in big
 	std::vector<int> order = order_vector(small.size());
@@ -136,7 +125,7 @@ void	PmergeMe::solve_vector() {
 	}
 
 	// Recursive call to algo
-	_vector = recursive(_vector);
+	_vector = recursive_vector(_vector);
 	
 	// If initial list was odd, insert the last one previously removed
 	if (hasAlone)
@@ -151,6 +140,13 @@ std::vector<int>	PmergeMe::get_vector() const {
 }
 
 // === Deque algo ===
+void	PmergeMe::fill_deque(int argc, char *argv[]) {
+	for (int i = 1; i < argc; i++) {	
+		std::string n = argv[i];
+		this->_deque.push_back(std::stoi(n));
+	}
+}
+
 static std::deque<int> jacob_sequence_deque(int size) {
 	std::deque<int> jacob;
 	jacob.push_back(1);
@@ -176,7 +172,7 @@ static std::deque<int> order_deque(int size) {
 	return order;
 }
 
-static std::deque<int>	recursive(std::deque<int> d) {
+static std::deque<int>	recursive_deque(std::deque<int> d) {
 	if (d.size() <= 1)
 		return d;
 
@@ -208,7 +204,7 @@ static std::deque<int>	recursive(std::deque<int> d) {
 		big.push_back(d.back());
 
 	// Recursive call on big
-	big = recursive(big);
+	big = recursive_deque(big);
 
 	// Insert all the small in big
 	std::deque<int> order = order_deque(small.size());
@@ -234,7 +230,7 @@ void	PmergeMe::solve_deque() {
 	}
 
 	// Recursive call to algo
-	_deque = recursive(_deque);
+	_deque = recursive_deque(_deque);
 	
 	// If initial list was odd, insert the last one previously removed
 	if (hasAlone) {
