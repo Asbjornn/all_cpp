@@ -6,7 +6,7 @@
 /*   By: gcauchy <gcauchy@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 15:59:46 by gcauchy           #+#    #+#             */
-/*   Updated: 2026/01/04 17:22:01 by gcauchy          ###   ########.fr       */
+/*   Updated: 2026/01/19 13:19:12 by gcauchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ static bool is_token(char c) {
 }
 
 static int valid_format(char *input) {
+	if (!input[0]) {
+		std::cerr << "Input is null" << std::endl;
+		return 0;
+	}
 	for (int i = 0; input[i]; i++)
 	{
 		if (isdigit(input[i]) && isdigit(input[i + 1]))
